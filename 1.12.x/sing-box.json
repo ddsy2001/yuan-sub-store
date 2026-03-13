@@ -150,63 +150,63 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/SingBox/GooglePlay/GooglePlay.srs",
-        "download_detour": "direct"
+        "download_detour": "proxy"
       },
       {
         "tag": "google_fcm",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/SingBox/GoogleFCM/GoogleFCM.srs",
-        "download_detour": "direct"
+        "download_detour": "proxy"
       },
       {
         "tag": "openai",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/SingBox/OpenAI/OpenAI.srs",
-        "download_detour": "direct"
+        "download_detour": "proxy"
       },
       {
         "tag": "google_photos",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/SingBox/GooglePhotos/GooglePhotos.srs",
-        "download_detour": "direct"
+        "download_detour": "proxy"
       },
       {
         "tag": "telegram",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/SingBox/Telegram/Telegram.srs",
-        "download_detour": "direct"
+        "download_detour": "proxy"
       },
       {
         "tag": "youtube",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/SingBox/YouTube/YouTube.srs",
-        "download_detour": "direct"
+        "download_detour": "proxy"
       },
       {
         "tag": "gemini",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/SingBox/Gemini/Gemini.srs",
-        "download_detour": "direct"
+        "download_detour": "proxy"
       },
       {
         "tag": "cn_domain",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/SingBox/ChinaMax/ChinaMax.srs",
-        "download_detour": "direct"
+        "download_detour": "proxy"
       },
       {
         "tag": "cn_ip",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/SingBox/ChinaIPs/ChinaIPs.srs",
-        "download_detour": "direct"
+        "download_detour": "proxy"
       }
     ],
     "final": "final",
