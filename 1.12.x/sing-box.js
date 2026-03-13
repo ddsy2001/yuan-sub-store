@@ -46,7 +46,15 @@ config.outbounds.forEach(outbound => {
   }
 });
 
+// 将配置转回文本
 $content = JSON.stringify(config, null, 2)
+
+// ================= 新增的代码 =================
+// 强制将 jsdelivr 替换回原始的 raw.githubusercontent.com
+$content = $content.replace(/https?:\/\/(fastly|cdn)\.jsdelivr\.net\/gh\/([^/]+)\/([^/@]+)(?:@([^/]+))?\//g, 'https://raw.githubusercontent.com/$2/$3/$4/');
+// 强制清理诸如 ghfast, ghproxy 等第三方加速前缀
+$content = $content.replace(/https?:\/\/[^\/]+\/(https:\/\/raw\.githubusercontent\.com)/g, '$1');
+// ==============================================
 
 function getTags(proxies, regex) {
   return (regex ? proxies.filter(p => regex.test(p.tag)) : proxies).map(p => p.tag)
