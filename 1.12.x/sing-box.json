@@ -120,6 +120,11 @@
         "outbound": "google_photos"
       },
       {
+        "rule_set": "google",
+        "action": "route",
+        "outbound": "google"
+      },
+      {
         "rule_set": "telegram",
         "action": "route",
         "outbound": "telegram"
@@ -218,6 +223,14 @@
         "update_interval": "1d"
       },
       {
+        "tag": "google",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Google/Google.srs",
+        "download_detour": "direct",
+        "update_interval": "1d"
+      },
+      {
         "tag": "telegram",
         "type": "remote",
         "format": "binary",
@@ -298,6 +311,12 @@
     },
     {
       "tag": "google_photos",
+      "type": "selector",
+      "outbounds": ["proxy", "direct", "jp", "kr", "us", "sg", "all", "all-auto"],
+      "default": "proxy"
+    },
+    {
+      "tag": "google",
       "type": "selector",
       "outbounds": ["proxy", "direct", "jp", "kr", "us", "sg", "all", "all-auto"],
       "default": "proxy"
