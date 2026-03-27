@@ -206,7 +206,7 @@
         "tag": "bilibili_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Bilibili/Bilibili.srs",
+        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/BiliBili/BiliBili.srs",
         "download_detour": "direct"
       },
       {
