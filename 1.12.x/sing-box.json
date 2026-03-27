@@ -202,56 +202,64 @@
         "type": "remote",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/GoogleFCM/GoogleFCM.srs",
-        "download_detour": "direct"
+        "download_detour": "direct",
+        "update_interval": "1d"
       },
       {
         "tag": "telegram",
         "type": "remote",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Telegram/Telegram.srs",
-        "download_detour": "direct"
+        "download_detour": "direct",
+        "update_interval": "1d"
       },
       {
         "tag": "youtube",
         "type": "remote",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/YouTube/YouTube.srs",
-        "download_detour": "direct"
+        "download_detour": "direct",
+        "update_interval": "1d"
       },
       {
         "tag": "openai",
         "type": "remote",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/OpenAI/OpenAI.srs",
-        "download_detour": "direct"
+        "download_detour": "direct",
+        "update_interval": "1d"
       },
       {
         "tag": "gemini",
         "type": "remote",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Gemini/Gemini.srs",
-        "download_detour": "direct"
+        "download_detour": "direct",
+        "update_interval": "1d"
       },
       {
         "tag": "proxy_domain",
         "type": "remote",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Proxy/Proxy.srs",
-        "download_detour": "direct"
+        "download_detour": "direct",
+        "update_interval": "1d"
       },
       {
         "tag": "cn_ip",
         "type": "remote",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/ChinaIPs/ChinaIPs.srs",
-        "download_detour": "direct"
+        "download_detour": "direct",
+        "update_interval": "1d"
       },
       {
         "tag": "cn_domain",
         "type": "remote",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/ChinaMax/ChinaMax.srs",
-        "download_detour": "direct"
+        "download_detour": "direct",
+        "update_interval": "1d"
       }
     ],
     "final": "final",
