@@ -96,32 +96,64 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "bilibili_domain",
+        "rule_set": "google_fcm",
         "action": "route",
-        "outbound": "bilibili"
+        "outbound": "google_fcm"
       },
       {
-        "rule_set": [
-          "netflix_ip",
-          "netflix_domain"
+        "rule_set": "openai",
+        "action": "route",
+        "outbound": "openai"
+      },
+      {
+        "process_name": [
+          "com.google.android.apps.photos"
         ],
         "action": "route",
-        "outbound": "netflix"
+        "outbound": "google_photos"
       },
       {
-        "rule_set": "bahamut_domain",
+        "rule_set": "telegram",
         "action": "route",
-        "outbound": "bahamut"
+        "outbound": "telegram"
       },
       {
-        "rule_set": "youtube_domain",
+        "rule_set": "youtube",
         "action": "route",
         "outbound": "youtube"
       },
       {
-        "rule_set": "openai_domain",
+        "rule_set": "gemini",
         "action": "route",
-        "outbound": "openai"
+        "outbound": "gemini"
+      },
+      {
+        "process_name": [
+          "com.hush.yamby"
+        ],
+        "action": "route",
+        "outbound": "emby"
+      },
+      {
+        "process_name": [
+          "com.server.auditor.ssh.client"
+        ],
+        "action": "route",
+        "outbound": "termius"
+      },
+      {
+        "domain_suffix": [
+          "nodeseek.com"
+        ],
+        "action": "route",
+        "outbound": "nodeseek"
+      },
+      {
+        "domain_suffix": [
+          "forum.naixi.net"
+        ],
+        "action": "route",
+        "outbound": "naixi"
       },
       {
         "type": "logical",
@@ -134,10 +166,7 @@
             "invert": true,
             "rule_set": [
               "cn_domain",
-              "apple_domain",
-              "google_domain",
-              "telegram_domain",
-              "netflix_domain"
+              "telegram"
             ]
           }
         ],
@@ -146,30 +175,6 @@
       },
       {
         "action": "resolve"
-      },
-      {
-        "rule_set": [
-          "telegram_ip",
-          "telegram_domain"
-        ],
-        "action": "route",
-        "outbound": "telegram"
-      },
-      {
-        "rule_set": [
-          "google_ip",
-          "google_domain"
-        ],
-        "action": "route",
-        "outbound": "google"
-      },
-      {
-        "rule_set": [
-          "apple_ip",
-          "apple_domain"
-        ],
-        "action": "route",
-        "outbound": "apple"
       },
       {
         "rule_set": [
@@ -182,31 +187,45 @@
     ],
     "rule_set": [
       {
-        "tag": "apple_ip",
+        "tag": "google_fcm",
         "type": "remote",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Apple/Apple.srs",
+        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/GoogleFCM/GoogleFCM.srs",
         "download_detour": "direct"
       },
       {
-        "tag": "apple_domain",
+        "tag": "telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Apple/Apple.srs",
+        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Telegram/Telegram.srs",
         "download_detour": "direct"
       },
       {
-        "tag": "bahamut_domain",
+        "tag": "youtube",
         "type": "remote",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Bahamut/Bahamut.srs",
+        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/YouTube/YouTube.srs",
         "download_detour": "direct"
       },
       {
-        "tag": "bilibili_domain",
+        "tag": "openai",
         "type": "remote",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/BiliBili/BiliBili.srs",
+        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/OpenAI/OpenAI.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "gemini",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Gemini/Gemini.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "proxy_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Proxy/Proxy.srs",
         "download_detour": "direct"
       },
       {
@@ -222,69 +241,6 @@
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/ChinaMax/ChinaMax.srs",
         "download_detour": "direct"
-      },
-      {
-        "tag": "google_ip",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Google/Google.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "google_domain",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Google/Google.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "netflix_ip",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Netflix/Netflix.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "netflix_domain",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Netflix/Netflix.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "openai_domain",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/OpenAI/OpenAI.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "proxy_domain",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Proxy/Proxy.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "telegram_ip",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Telegram/Telegram.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "telegram_domain",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Telegram/Telegram.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "youtube_domain",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/YouTube/YouTube.srs",
-        "download_detour": "direct"
       }
     ],
     "final": "final",
@@ -294,165 +250,79 @@
     {
       "tag": "proxy",
       "type": "selector",
-      "outbounds": [
-        "jp",
-        "kr",
-        "us",
-        "sg",
-        "all",
-        "all-auto",
-        "direct"
-      ],
+      "outbounds": ["jp", "kr", "us", "sg", "all", "all-auto", "direct"],
       "default": "all-auto"
     },
     {
-      "tag": "google",
+      "tag": "google_fcm",
       "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "jp",
-        "kr",
-        "us",
-        "sg",
-        "all",
-        "all-auto"
-      ],
-      "default": "proxy"
-    },
-    {
-      "tag": "apple",
-      "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "jp",
-        "kr",
-        "us",
-        "sg",
-        "all",
-        "all-auto"
-      ],
-      "default": "direct"
-    },
-    {
-      "tag": "telegram",
-      "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "jp",
-        "kr",
-        "us",
-        "sg",
-        "all",
-        "all-auto"
-      ],
-      "default": "proxy"
-    },
-    {
-      "tag": "bilibili",
-      "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "jp",
-        "kr",
-        "us",
-        "sg",
-        "all",
-        "all-auto"
-      ],
-      "default": "direct"
-    },
-    {
-      "tag": "netflix",
-      "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "jp",
-        "kr",
-        "us",
-        "sg",
-        "all",
-        "all-auto"
-      ],
-      "default": "proxy"
-    },
-    {
-      "tag": "bahamut",
-      "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "jp",
-        "kr",
-        "us",
-        "sg",
-        "all",
-        "all-auto"
-      ],
-      "default": "proxy"
-    },
-    {
-      "tag": "youtube",
-      "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "jp",
-        "kr",
-        "us",
-        "sg",
-        "all",
-        "all-auto"
-      ],
+      "outbounds": ["proxy", "direct", "jp", "kr", "us", "sg", "all", "all-auto"],
       "default": "proxy"
     },
     {
       "tag": "openai",
       "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "jp",
-        "kr",
-        "us",
-        "sg",
-        "all",
-        "all-auto"
-      ],
+      "outbounds": ["proxy", "direct", "us", "jp", "kr", "sg", "all", "all-auto"],
+      "default": "proxy"
+    },
+    {
+      "tag": "google_photos",
+      "type": "selector",
+      "outbounds": ["proxy", "direct", "jp", "kr", "us", "sg", "all", "all-auto"],
+      "default": "proxy"
+    },
+    {
+      "tag": "telegram",
+      "type": "selector",
+      "outbounds": ["proxy", "direct", "jp", "kr", "us", "sg", "all", "all-auto"],
+      "default": "proxy"
+    },
+    {
+      "tag": "youtube",
+      "type": "selector",
+      "outbounds": ["proxy", "direct", "jp", "kr", "us", "sg", "all", "all-auto"],
+      "default": "proxy"
+    },
+    {
+      "tag": "gemini",
+      "type": "selector",
+      "outbounds": ["proxy", "direct", "us", "jp", "kr", "sg", "all", "all-auto"],
+      "default": "proxy"
+    },
+    {
+      "tag": "emby",
+      "type": "selector",
+      "outbounds": ["proxy", "direct", "jp", "kr", "us", "sg", "all", "all-auto"],
+      "default": "proxy"
+    },
+    {
+      "tag": "termius",
+      "type": "selector",
+      "outbounds": ["proxy", "direct", "jp", "kr", "us", "sg", "all", "all-auto"],
+      "default": "proxy"
+    },
+    {
+      "tag": "nodeseek",
+      "type": "selector",
+      "outbounds": ["proxy", "direct", "jp", "kr", "us", "sg", "all", "all-auto"],
+      "default": "proxy"
+    },
+    {
+      "tag": "naixi",
+      "type": "selector",
+      "outbounds": ["proxy", "direct", "jp", "kr", "us", "sg", "all", "all-auto"],
       "default": "proxy"
     },
     {
       "tag": "cn",
       "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "jp",
-        "kr",
-        "us",
-        "sg",
-        "all",
-        "all-auto"
-      ],
+      "outbounds": ["proxy", "direct", "jp", "kr", "us", "sg", "all", "all-auto"],
       "default": "direct"
     },
     {
       "tag": "final",
       "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "jp",
-        "kr",
-        "us",
-        "sg",
-        "all",
-        "all-auto"
-      ],
+      "outbounds": ["proxy", "direct", "jp", "kr", "us", "sg", "all", "all-auto"],
       "default": "proxy"
     },
     {
@@ -484,7 +354,7 @@
       "tag": "all-auto",
       "type": "urltest",
       "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "http://cp.cloudflare.com/generate_204",
       "interval": "1m",
       "tolerance": 50
     },
