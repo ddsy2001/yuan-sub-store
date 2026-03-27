@@ -109,6 +109,10 @@
         "package_name": [
           "com.google.android.apps.photos"
         ],
+        "action": "route",
+        "outbound": "google_photos"
+      },
+      {
         "process_name": [
           "com.google.android.apps.photos"
         ],
@@ -134,6 +138,10 @@
         "package_name": [
           "com.hush.yamby"
         ],
+        "action": "route",
+        "outbound": "emby"
+      },
+      {
         "process_name": [
           "com.hush.yamby"
         ],
@@ -144,6 +152,10 @@
         "package_name": [
           "com.server.auditor.ssh.client"
         ],
+        "action": "route",
+        "outbound": "termius"
+      },
+      {
         "process_name": [
           "com.server.auditor.ssh.client",
           "Termius.exe",
