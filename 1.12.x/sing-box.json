@@ -106,6 +106,9 @@
         "outbound": "openai"
       },
       {
+        "package_name": [
+          "com.google.android.apps.photos"
+        ],
         "process_name": [
           "com.google.android.apps.photos"
         ],
@@ -128,6 +131,9 @@
         "outbound": "gemini"
       },
       {
+        "package_name": [
+          "com.hush.yamby"
+        ],
         "process_name": [
           "com.hush.yamby"
         ],
@@ -135,8 +141,13 @@
         "outbound": "emby"
       },
       {
-        "process_name": [
+        "package_name": [
           "com.server.auditor.ssh.client"
+        ],
+        "process_name": [
+          "com.server.auditor.ssh.client",
+          "Termius.exe",
+          "Termius"
         ],
         "action": "route",
         "outbound": "termius"
