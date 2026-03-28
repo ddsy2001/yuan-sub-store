@@ -101,6 +101,15 @@
         "outbound": "google_fcm"
       },
       {
+        "port": [
+          5228,
+          5229,
+          5230
+        ],
+        "action": "route",
+        "outbound": "google_fcm"
+      },
+      {
         "rule_set": "openai",
         "action": "route",
         "outbound": "openai"
