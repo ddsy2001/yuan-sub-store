@@ -37,8 +37,7 @@
       {
         "rule_set": "google_fcm",
         "action": "route",
-        "server": "google",
-        "rewrite_ttl": 1
+        "server": "google"
       },
       {
         "rule_set": "cn_domain",
@@ -152,16 +151,6 @@
         "outbound": "google_photos"
       },
       {
-        "rule_set": "google",
-        "action": "route",
-        "outbound": "google"
-      },
-      {
-        "rule_set": "telegram",
-        "action": "route",
-        "outbound": "telegram"
-      },
-      {
         "rule_set": "youtube",
         "action": "route",
         "outbound": "youtube"
@@ -170,6 +159,16 @@
         "rule_set": "gemini",
         "action": "route",
         "outbound": "gemini"
+      },
+      {
+        "rule_set": "google",
+        "action": "route",
+        "outbound": "google"
+      },
+      {
+        "rule_set": "telegram",
+        "action": "route",
+        "outbound": "telegram"
       },
       {
         "package_name": [
